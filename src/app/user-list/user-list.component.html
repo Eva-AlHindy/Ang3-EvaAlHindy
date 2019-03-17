@@ -1,0 +1,5 @@
+<!-- we use *ngFor to make a loop in userList array and display UserListItemComponent as a child to UserListComponent -->
+<ul class="">
+  <app-user-list-item *ngFor="let user of users" [user]="user" [textColor]="toggle_textColor"></app-user-list-item>
+</ul>
+<button type="button" class="" (click)="onClick_toggle()">Toggle Colors</button>

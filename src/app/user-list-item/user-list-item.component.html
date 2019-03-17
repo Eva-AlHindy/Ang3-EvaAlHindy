@@ -1,0 +1,5 @@
+<!-- we change the color of the text by using [style.color] and textColor is a boolean variable -->
+<!-- we add a routerLink to sent user to singleuser page and sent userId (which refer to the same name) with it  -->
+<li>
+  <a [routerLink]="['/singleuser', user.id]" [style.color]="textColor ? '#D31557' : 'green'">{{user.name}}</a>
+</li>

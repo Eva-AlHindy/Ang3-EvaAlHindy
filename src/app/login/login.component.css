@@ -1,0 +1,102 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #051937;
+  border: 1px solid #051937;
+  border-radius: 30px;
+  margin-left: 600px;
+  margin-top: 100px;
+  padding: 30px;
+  width: 350px;
+}
+
+.flex-container>div {
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 300px;
+  margin: 10px;
+  text-align: center;
+  font-size: 16px;
+  padding: 30px;
+}
+
+input {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #051937;
+  text-align: center;
+}
+
+input:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 3px solid rgba(81, 203, 238, 1);
+  text-align: center;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  background-color: #D31557;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  border: 1px solid #DDDDDD;
+  cursor: pointer;
+  margin: 3px;
+}
+
+button:hover {
+  box-shadow: 0 0 10px rgba(211, 21, 87, 1);
+}
+
+.loginBtn {
+  width: 80px;
+}
+
+.CreateBtn {
+  background-color: #4F5FC9;
+}
+
+.CreateBtn:hover {
+  box-shadow: 0 0 10px rgba(81, 203, 238, 1);
+}
+
+.errormassage {
+  color: #051937;
+  font-weight: normal;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  background-color: pink;
+  margin: 10px;
+  padding: 5px;
+}
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid rgba(81, 203, 238, 1);
+  ;
+}
+
+/* .ng-invalid:not(form) {
+  border-left: 5px solid #a94442;}
+  /* red */
+.ng-invalid:not(Form).ng-touched:not(Form) {
+  border-left: 5px solid #D31557;
+}

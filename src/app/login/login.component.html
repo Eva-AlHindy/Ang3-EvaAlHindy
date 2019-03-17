@@ -1,0 +1,46 @@
+<!-- login -->
+<div class="flex-container">
+  <!-- We use directive ngif to test the variable userState if it is found in local storage or not-->
+  <div class="" *ngIf="!userState">
+
+    <form #loginForm="ngForm">
+      <p>
+        Please Login
+      </p>
+      <input type="email" required email id="email" placeholder="Email" [(ngModel)]="model.email" #email="ngModel" name="email">
+      <br>
+      <!-- validation email -->
+      <div *ngIf="email.errors?.required && email.touched" class="errormassage">
+        Email is required
+      </div>
+      <div *ngIf="email.errors?.email && email.touched" class="errormassage">
+        Email is Invalid.
+      </div>
+
+      <br>
+      <input type="password" required password minlength="10" id="password" placeholder="Password" [(ngModel)]="model.password" #password="ngModel" name="password">
+      <br>
+      <!-- validation password -->
+      <div *ngIf="password.errors?.required && password.touched" class="errormassage">
+        Password is required.
+      </div>
+      <div *ngIf="password.errors?.minlength && password.touched" class="errormassage">
+        Password must be at least 10 characters long.
+      </div>
+
+      <br>
+      <button type="button" (click)="onSubmit()" routerLink="/dashboard" class="loginBtn" [disabled]="!loginForm.form.valid">Login</button>
+      <button type="submit" class="CreateBtn"> Create a new user</button>
+    </form>
+  </div>
+
+
+  <!-- logout -->
+  <div class="" *ngIf="userState">
+    <p>
+      You are already logged in.
+    </p>
+    <button type="button" class="" (click)="logout()">Logout </button>
+  </div>
+
+</div>

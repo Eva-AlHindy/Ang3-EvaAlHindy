@@ -1,0 +1,13 @@
+li {
+  display: block;
+  color: #000;
+  padding: 16px 16px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border: 1px solid #DDDDDD;
+  border-radius: 10px;
+  width: 300px;
+  height: 30px;
+  margin: 10px;
+}

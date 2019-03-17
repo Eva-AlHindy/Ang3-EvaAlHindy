@@ -1,0 +1,49 @@
+input[type=text] {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #DDDDDD;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #051937;
+  text-align: center;
+}
+
+input[type=text]:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
+  text-align: center;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  background-color: #4F5FC9;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  border: 1px solid #DDDDDD;
+  cursor: pointer;
+  margin: 3px;
+}
+
+button:hover {
+  box-shadow: 0 0 10px rgba(81, 203, 238, 1);
+}
+
+.removeBtn {
+  background-color: #D31557;
+}
+
+.removeBtn:hover {
+  box-shadow: 0 0 10px rgba(211, 21, 87, 1);
+}

@@ -1,0 +1,20 @@
+<!-- display the information of the user which matched with user that has the same id -->
+<div class="flex-container">
+  <div class="" *ngIf="user">
+    <p>
+      User Name :<span> {{user.username}}</span>
+    </p>
+    <p>
+      Name : {{user.name}}
+    </p>
+    <p>
+      City : {{user.address.city}}
+    </p>
+    <p>
+      Street : {{user.address.street}}
+    </p>
+    <p>
+      Zipcode : {{user.address.zipcode}}
+    </p>
+  </div>
+</div>

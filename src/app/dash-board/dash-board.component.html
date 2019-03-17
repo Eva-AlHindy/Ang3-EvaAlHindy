@@ -1,0 +1,16 @@
+<div class="container">
+  <!-- DashBoardComponent have two childs components -->
+  <!-- We use directive ngif to test the variable userState if it is found in local storage or not-->
+  <h1 *ngIf="!userState">Please log in to see the content!</h1>
+  <div class="flex-container" *ngIf="userState">
+    <div>
+      <!-- we sent userList array as input to app-user-list component -->
+      <app-user-list [users]="userList"></app-user-list>
+    </div>
+    <div>
+      <!-- we say to DashBoardComponent that you will recive tow outputs -->
+      <app-edit-users (addUser)="addUserName($event)" (removeUser)="removeUserName($event)"></app-edit-users>
+    </div>
+
+  </div>
+</div>

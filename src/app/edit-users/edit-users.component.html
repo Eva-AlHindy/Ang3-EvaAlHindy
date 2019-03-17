@@ -1,0 +1,6 @@
+<!-- we use  [(ngModel)] as two-way binding -->
+<input type="text" placeholder="Enter User Name" [(ngModel)]="name">
+<br>
+<br>
+<button type="button" class="" (click)="onClick_addUser()" [disabled]="name===''">Add User name</button>
+<button type="button" class="removeBtn" (click)="onClick_removeUser()">Remove</button>
