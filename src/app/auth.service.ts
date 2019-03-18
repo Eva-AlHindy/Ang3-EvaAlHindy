@@ -1,8 +1,9 @@
 /* In auth service, we import AdminFull which is a model and defined admis(typescript is AdminFull ) which has the information
 of admins:firstname,lastname, email and password.
-This service has three methods:checkIfLoggedIn,login and logout.
+This service has four methods:checkIfLoggedIn(),login() and logout().
 These methods are using by Login component to determine if the user is admin or not,
 and save user email in local storge.
+and the last one is createUser() which create a new admin.
 */
 
 import { Injectable } from '@angular/core';
@@ -39,11 +40,11 @@ export class AuthService {
   /*A method which first make for loop in admin object to find is the user have the same admin email and password.
 if this ok so it saves the useremail in localStorage and add the vale true to the variable adminIsFind.
 But if the vale of the adminIsFind is false so the user can't login and show alert 'Erorr login'*/
-  public login(user: string) {
+  public login(user: AdminLogin) {
 
     for (let i = 0; i < this.admins.length; i++) {
       if (user.email == this.admins[i].email && user.password == this.admins[i].password) {
-        localStorage.setItem('user', user);
+        localStorage.setItem('user', user.email);
         this.loggedUser = user.email;
         this.adminIsFind = true;
       }
@@ -61,4 +62,10 @@ But if the vale of the adminIsFind is false so the user can't login and show ale
     localStorage.clear();
     this.loggedUser = undefined;
   }
+  //A method which add a new admin(typescript is object) to admins array by using push method.
+  public createUser(admin: AdminFull) {
+    this.admins.push(admin);
+  }
+
+
 }

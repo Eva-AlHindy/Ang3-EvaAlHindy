@@ -4,7 +4,8 @@ import { DashBoardComponent } from './dash-board/dash-board.component';
 import { LoginComponent } from './login/login.component';
 import { SingleUserComponent } from './single-user/single-user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
+import { CreatNewUserComponent } from './creat-new-user/creat-new-user.component';
+import { ErrorMassageComponent } from './error-massage/error-massage.component';
 import {
   RouteGuardService as RouteGuard
 } from './route-guard.service';
@@ -24,7 +25,14 @@ const routes: Routes = [
     path: 'singleuser/:user',//we sent a parameter(user).
     component: SingleUserComponent
   },
-
+  {
+    path: 'creatnewuser',
+    component: CreatNewUserComponent
+  },
+  {
+    path: 'errormassage',
+    component: ErrorMassageComponent
+  },
   { path: '**', component: PageNotFoundComponent }
 ];
 

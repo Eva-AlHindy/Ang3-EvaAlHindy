@@ -13,7 +13,6 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { AdminLogin } from '../models/admin-login.model';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -41,7 +40,6 @@ export class LoginComponent implements OnInit {
   checkUser(): void {
     this.userState = this.authService.checkIfLoggedIn();
   }
-
 
   logout(): void {
     this.authService.logout();

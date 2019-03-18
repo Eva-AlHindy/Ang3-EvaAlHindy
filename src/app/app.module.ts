@@ -14,6 +14,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RouteGuardService } from './route-guard.service';
 import { AuthService } from './auth.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CreatNewUserComponent } from './creat-new-user/creat-new-user.component';
+import { ErrorMassageComponent } from './error-massage/error-massage.component';
 //we import two servescie(RouteGuardService and AuthService) to make a guard and added them to providers array
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
     SingleUserComponent,
     LoginComponent,
     NavBarComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    CreatNewUserComponent,
+    ErrorMassageComponent
   ],
   imports: [
     BrowserModule,
