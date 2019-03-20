@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,7 @@ import { AuthService } from './auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CreatNewUserComponent } from './creat-new-user/creat-new-user.component';
 import { ErrorMassageComponent } from './error-massage/error-massage.component';
+
 //we import two servescie(RouteGuardService and AuthService) to make a guard and added them to providers array
 @NgModule({
   declarations: [
@@ -36,12 +39,15 @@ import { ErrorMassageComponent } from './error-massage/error-massage.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [
     AuthService,
     RouteGuardService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ErrorMassageComponent]
 })
 export class AppModule { }

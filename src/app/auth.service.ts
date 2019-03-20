@@ -41,18 +41,22 @@ export class AuthService {
 if this ok so it saves the useremail in localStorage and add the vale true to the variable adminIsFind.
 But if the vale of the adminIsFind is false so the user can't login and show alert 'Erorr login'*/
   public login(user: AdminLogin) {
-
+    this.adminIsFind = false;
     for (let i = 0; i < this.admins.length; i++) {
       if (user.email == this.admins[i].email && user.password == this.admins[i].password) {
         localStorage.setItem('user', user.email);
         this.loggedUser = user.email;
         this.adminIsFind = true;
+        break;
       }
       else {
         this.adminIsFind = false;
       }
+      console.log("befor-in-forloop :", this.adminIsFind);
     }
-    if (!this.adminIsFind) {
+    console.log("befor-if:", this.adminIsFind);
+    if (this.adminIsFind == false) {
+      console.log("efter-if:", this.adminIsFind);
       alert("Error Login");
     }
   }

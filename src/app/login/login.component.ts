@@ -13,6 +13,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { AdminLogin } from '../models/admin-login.model';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -25,7 +26,6 @@ export class LoginComponent implements OnInit {
   userState: string;
 
   constructor(private authService: AuthService) {
-
   }
 
   ngOnInit() {
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.model);
+    //console.log(this.model);
     this.authService.login(this.model);
   }
 
