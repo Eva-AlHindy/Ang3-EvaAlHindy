@@ -52,11 +52,10 @@ But if the vale of the adminIsFind is false so the user can't login and show ale
       else {
         this.adminIsFind = false;
       }
-      console.log("befor-in-forloop :", this.adminIsFind);
+
     }
-    console.log("befor-if:", this.adminIsFind);
+
     if (this.adminIsFind == false) {
-      console.log("efter-if:", this.adminIsFind);
       alert("Error Login");
     }
   }
@@ -70,6 +69,5 @@ But if the vale of the adminIsFind is false so the user can't login and show ale
   public createUser(admin: AdminFull) {
     this.admins.push(admin);
   }
-
 
 }

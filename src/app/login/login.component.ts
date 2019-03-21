@@ -12,7 +12,8 @@ by using [this.authService.logout();] which we call it from authService.
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { AdminLogin } from '../models/admin-login.model';
-
+import { MatDialog, MatDialogRef } from '@angular/material';
+import { ErrorMassageComponent } from '../error-massage/error-massage.component';
 
 @Component({
   selector: 'app-login',
@@ -24,8 +25,8 @@ export class LoginComponent implements OnInit {
   model: AdminLogin = new AdminLogin('', '');
   username: string = "";
   userState: string;
-
-  constructor(private authService: AuthService) {
+  errorDialogRef: MatDialogRef<ErrorMassageComponent>;
+  constructor(private authService: AuthService, private dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -33,16 +34,22 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(): void {
-    //console.log(this.model);
     this.authService.login(this.model);
   }
 
   checkUser(): void {
     this.userState = this.authService.checkIfLoggedIn();
   }
-
   logout(): void {
     this.authService.logout();
     this.checkUser();
+  }
+
+  openErrorDialog() {
+    // console.log("test");
+    // alert("test");
+    this.errorDialogRef = this.dialog.open(ErrorMassageComponent, {
+      hasBackdrop: false
+    });
   }
 }
